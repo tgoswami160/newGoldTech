@@ -54,9 +54,10 @@ const products = [
 ]
 
 const team = [
-  { name: 'Rajesh Kumar', role: 'Founder & CEO', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80', bio: '20+ years in home appliances.' },
-  { name: 'Priya Sharma', role: 'Head of Operations', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80', bio: 'Ensuring quality at every step.' },
-  { name: 'Amit Patel', role: 'Sales Director', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80', bio: 'Building lasting customer relationships.' },
+  { name: 'Anand Kumar Sharma', role: 'CEO', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80' },
+  { name: 'Sandeep Rajput', role: 'CEO', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80' },
+  { name: 'Neeraj Kumar Sharma', role: 'Sales Manager', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80'},
+  { name: 'Sanju', role: 'Sales Manager', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80'},
 ]
 
 const usageImages = [
@@ -310,7 +311,7 @@ export default function Home() {
           >
             Meet the people behind NewGoldTech.
           </motion.p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {team.map((member, i) => (
               <motion.div
                 key={member.name}
@@ -330,7 +331,6 @@ export default function Home() {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
                   <p className="text-brand-600 font-medium mb-2">{member.role}</p>
-                  <p className="text-gray-600 text-sm">{member.bio}</p>
                 </div>
               </motion.div>
             ))}

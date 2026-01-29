@@ -198,24 +198,40 @@ export default function Contact() {
           </motion.div>
         </div>
 
-        {/* Map */}
+        {/* Map - click opens address in Google Maps */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-16 rounded-2xl overflow-hidden shadow-soft border border-gray-200"
+          className="mt-16 rounded-2xl overflow-hidden shadow-soft border border-gray-200 relative"
         >
-          <iframe
-            title="NewGoldTech location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.6982345678903!2d77.2090!3d28.6139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM2JzUwLjAiTiA3N8KwMTInMzIuNCJF!5e0!3m2!1sen!2sin!4v1234567890"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="w-full"
-          />
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=123+Industrial+Area+City"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+            aria-label="Open address in Google Maps"
+          >
+            <iframe
+              title="NewGoldTech location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.6982345678903!2d77.2090!3d28.6139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM2JzUwLjAiTiA3N8KwMTInMzIuNCJF!5e0!3m2!1sen!2sin!4v1234567890"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full pointer-events-none"
+            />
+          </a>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=123+Industrial+Area+City"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-brand-500 text-white text-sm font-medium rounded-lg shadow-lg hover:bg-brand-600 transition-colors"
+          >
+            Open address in Google Maps
+          </a>
         </motion.div>
       </section>
     </motion.div>
